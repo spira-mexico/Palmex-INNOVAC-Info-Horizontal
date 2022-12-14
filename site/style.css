@@ -1,0 +1,7 @@
+#box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 0px 30px #043a62;
+  text-align: center;
+}
