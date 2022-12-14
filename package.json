@@ -10,6 +10,6 @@
   "scripts": {
     "zip": "node ./scripts/creajs.js && node ./scripts/empaquetado.js",
     "fecha": "node ./scripts/creajs.js",
-    "prod": "node ./scripts/creajs.js && netlify deploy --prod -d Curso/sco"
+    "prod": "node ./scripts/creajs.js && netlify deploy --prod -d Infografia"
   }
 }

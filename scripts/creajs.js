@@ -11,7 +11,7 @@ var msg_coral = clc.xterm(217).bgXterm(232);
 var msg_rojo = clc.xterm(197).bgXterm(232);
 
 // fs.writeFile("./public/librerias/js/fecha.js", fechaString, function (err) {
-fs.writeFile("./Curso/sco/js/fecha.js", fechaString, function (err) {
+fs.writeFile("./Infografia/js/fecha.js", fechaString, function (err) {
   if (err) return console.log(err);
   console.log(msg_coral("Esta lista la fecha!"));
 });

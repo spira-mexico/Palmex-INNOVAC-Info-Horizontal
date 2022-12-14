@@ -2,9 +2,9 @@
 
 Infografía Horizontal
 
-Link Test: 
+Link Test: https://palmexinnovac-infohorizontal.netlify.app
 
-Link Documentación: 
+Link Documentación: https://spira-mexico.notion.site/Palmex-900bb4bf2ecc40ef82e94f48354cdbfb
 
 ---
 Desarrollo 14/Dic/2022
