@@ -1,18 +1,15 @@
 {
-  "name": "seleccion_por_competencias",
+  "name": "curso",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "cli-color": "^2.0.0",
-    "http-server": "^0.11.1",
-    "scormcloud-api-wrapper": "^1.1.11",
+    "moment": "^2.29.1",
     "zip-a-folder": "^0.0.9"
   },
   "scripts": {
-    "starti": "node ./node_modules/.bin/http-server -a localhost -p 8000 -c-1",
-    "start": "http-server -a localhost -p 8000 -c-1",
-    "inicia": "http-server -a localhost -p 8000 -c-1",
-    "zip": "node ./scripts/empaquetado.js",
-    "scorm": "node ./scripts/empaquetado.js && node ./scripts/ScormCloud.js"
+    "zip": "node ./scripts/creajs.js && node ./scripts/empaquetado.js",
+    "fecha": "node ./scripts/creajs.js",
+    "prod": "node ./scripts/creajs.js && netlify deploy --prod -d Curso/sco"
   }
 }
