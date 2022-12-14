@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Copyright DJ 2019-->
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Language" content="es" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Last-Modified" content="0" />
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+
+  <link rel="stylesheet" href="css/Reset.css" />
+  <link rel="stylesheet" href="css/estilos.css" />
+
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/jquery.jInvertScroll.min.js"></script>
+  <script src="js/preloadjs-0.6.2.min.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <title>Demo</title>
+</head>
+
+<body onresize="location.reload()">
+  <div id="contenido">
+    <img id="texto1" class="element" _origenx="0" _origeny="0" style="position: absolute;"
+      src="imagenes/Inicio/img01.jpg" />
+    <img id="texto2" class="element" _origenx="750" _origeny="600" style="position: absolute;"
+      src="imagenes/Inicio/btn01.png" />
+    <!-- cargador -->
+    <img id="cargando" class="cargando" src="imagenes/cargando.gif" />
+  </div>
+</body>
+
+<script>
+  $(document).ready(function () {
+    cacularEscala();
+    ajustarEscenario();
+
+    function preload() {
+      $("#cargando").fadeIn();
+      $(".element").css("opacity", 0);
+      var preload = new createjs.LoadQueue();
+      preload.addEventListener("complete", iniciaCargador);
+      $.each($(".element"), function () {
+        preload.loadFile($("#" + this.id).attr("src"));
+      });
+    }
+
+    function iniciaCargador(event) {
+      $.each($(".element"), function () {
+        inicializar($("#" + this.id));
+      });
+      $("#cargando").show();
+      $("#cargando").css({
+        opacity: "1"
+      });
+      $("#cargando").fadeOut();
+      muestraContenido();
+    }
+
+    function muestraContenido() {
+      $("#texto1")
+        .css({
+          display: "block"
+        })
+        .show()
+        .animate({
+            opacity: 1
+          },
+          400
+        );
+      $("#texto2")
+        .css({
+          display: "block"
+        })
+        .show()
+        .animate({
+            opacity: 1
+          },
+          400
+        );
+      aparecePersonaje("#personaje", 1000, 500);
+
+      $("#texto2").click(function () {
+        parent.click = true;
+        var curseStatus = parent.get('cmi.core.lesson_status');
+        if (curseStatus === "completed") {
+          parent.loadContent('seccion1.html');
+        } else {
+          parent.checkProgress();
+        }
+      });
+    }
+    preload();
+  });
+</script>
+
+</html>

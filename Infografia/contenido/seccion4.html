@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Copyright DJ 2019-->
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Content-Language" content="es" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Expires" content="0" />
+		<meta http-equiv="Last-Modified" content="0" />
+		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<link rel="stylesheet" href="css/Reset.css" />
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet" />
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.jInvertScroll.min.js"></script>
+		<script src="js/tweenmax.min.js"></script>
+		<script src="js/preloadjs-0.6.2.min.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="js/main4.js"></script>
+		<title>Kidzania: La historia Interminable</title>
+		<style>
+			#sprite {
+				width: 435px;
+				height: 1040px;
+				margin: -5% auto 0 auto;
+				/* positioning tweak */
+				background: url('imagenes/seccion4/sprite1.png') no-repeat 0 0%;
+				animation: sprite 4s steps(6) infinite;
+			}
+			#spriteanimado {
+				z-index: 9;
+			}
+			@keyframes sprite {
+				from {
+					background-position: 0 0%;
+				}
+				to {
+					background-position: 0 100%;
+				}
+			}
+		</style>
+	</head>
+
+	<body onresize="location.reload()">
+		<div id="contenido">
+			<div class="capa1 scroll" _origenx="0" _origeny="0" _width="11400">
+				<img id="capa1" class="element" src="imagenes/seccion4/a.jpg" />
+				<div id="contenedorMenu" class="element" style="position: fixed;" _origenx="65" _origeny="300">
+					<div id="menuNav">
+						<span class="indice-text">Menu</span>
+						<div class="btnsNav">
+							<div id="btn1" class="navIndicador"></div>
+							<div id="btn1Tag" class="btnTag">Start</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn2" class="navIndicador"></div>
+							<div id="btn2Tag" class="btnTag">KidZania 0.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn3" class="navIndicador"></div>
+							<div id="btn3Tag" class="btnTag">KidZania 1.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn4" class="navIndicador"></div>
+							<div id="btn4Tag" class="btnTag">KidZania 2.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn5" class="navIndicador"></div>
+							<div id="btn5Tag" class="btnTag">KidZania 3.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn6" class="navIndicador"></div>
+							<div id="btn6Tag" class="btnTag">KidZania 4.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn7" class="navIndicador"></div>
+							<div id="btn7Tag" class="btnTag">KidZania 99.0</div>
+						</div>
+					</div>
+				</div>
+				<img id="carro1" class="element" _origenx="115" _origeny="515" src="imagenes/seccion4/carro.png" />
+				<img id="img1" class="element" _origenx="125" _origeny="70" src="imagenes/seccion4/img1.png" />
+				<img id="img2" class="element" _origenx="220" _origeny="190" src="imagenes/seccion4/img2.png" />
+				<img id="img3" class="element" _origenx="920" _origeny="340" src="imagenes/seccion4/img3.png" />
+				<img id="img4" class="element" _origenx="719" _origeny="560" src="imagenes/seccion4/img4.png" />
+				<img id="img5" class="element" _origenx="1100" _origeny="560" src="imagenes/seccion4/img5.png" />
+				<img id="img6" class="element" _origenx="1480" _origeny="560" src="imagenes/seccion4/img6.png" />
+				<img id="img7" class="element" _origenx="820" _origeny="170" src="imagenes/seccion4/img7.png" />
+				<img id="img8" class="element" _origenx="2080" _origeny="80" src="imagenes/seccion4/img8.png" />
+				<img id="img9" class="element" _origenx="3040" _origeny="70" src="imagenes/seccion4/img9.png" />
+				<img id="img10" class="element" _origenx="2410" _origeny="190" src="imagenes/seccion4/img10.png" />
+				<img id="img11" class="element" _origenx="3250" _origeny="320" src="imagenes/seccion4/img11.png" />
+				<img id="img12" class="element" _origenx="4140" _origeny="240" src="imagenes/seccion4/img12.png" />
+				<img id="img13" class="element" _origenx="4250" _origeny="320" src="imagenes/seccion4/img13.png" />
+				<img id="img14" class="element" _origenx="3800" _origeny="320" src="imagenes/seccion4/img14.png" />
+				<img id="img15" class="element" _origenx="5100" _origeny="480" src="imagenes/seccion4/img15.png" />
+				<img id="img16" class="element" _origenx="6100" _origeny="40" src="imagenes/seccion4/img16.png" />
+				<img id="img17" class="element" _origenx="6910" _origeny="-340" src="imagenes/seccion4/img17.png" />
+				<img id="img18" class="element" _origenx="6890" _origeny="370" src="imagenes/seccion4/img18.png" />
+				<img id="img19" class="element" _origenx="7840" _origeny="50" src="imagenes/seccion4/img19.png" />
+				<img id="img20" class="element" _origenx="8240" _origeny="240" src="imagenes/seccion4/img20.png" />
+				<img id="img21" class="element" _origenx="7838" _origeny="290" src="imagenes/seccion4/img21.png" />
+				<img id="img22" class="element" _origenx="8698" _origeny="290" src="imagenes/seccion4/img22.png" />
+				<img id="img23" class="element" _origenx="8248" _origeny="720" src="imagenes/seccion4/img23.png" />
+				<img id="img24" class="element" _origenx="8598" _origeny="140" src="imagenes/seccion4/img24.png" />
+				<img id="img25" class="element" _origenx="9068" _origeny="30" src="imagenes/seccion4/img25.png" />
+				<img id="img26" class="element" _origenx="8798" _origeny="760" src="imagenes/seccion4/img26.png" />
+				<img id="img29" class="element" _origenx="9938" _origeny="230" src="imagenes/seccion4/img29.png" />
+				<img id="img30" class="element" _origenx="9738" _origeny="320" src="imagenes/seccion4/img30.png" />
+				<img id="img27" class="element" _origenx="9898" _origeny="170" src="imagenes/seccion4/img27.png" />
+				<img id="img28" class="element" _origenx="10608" _origeny="-370" src="imagenes/seccion4/img28.png" />
+				<img id="img31" class="element" _origenx="10948" _origeny="290" src="imagenes/seccion4/img31.png" />
+				<img id="img32" class="element" _origenx="678" _origeny="540" src="imagenes/seccion4/popup_01.png" />
+				<img id="img33" class="element" _origenx="1063" _origeny="540" src="imagenes/seccion4/popup_02.png" />
+				<img id="img34" class="element" _origenx="1463" _origeny="540" src="imagenes/seccion4/popup_03.png" />
+				<div id="spriteanimado" class="element" _origenx="4582" _origeny="426">
+					<div id="sprite"></div>
+				</div>
+			</div>
+			<!-- cargador -->
+			<img id="cargando" class="cargando" src="imagenes/cargando.gif" />
+		</div>
+	</body>
+
+	<script>
+		$(document).ready(function() {
+			cacularEscala();
+			ajustarEscenario();
+			parent.set("cmi.core.lesson_location", "" + 4 + "");
+			parent.guardaAvance(4);
+
+			function preload() {
+				$('#cargando').fadeIn();
+				var preload = new createjs.LoadQueue();
+				preload.addEventListener('complete', iniciaCargador);
+				$.each($('.element'), function() {
+					preload.loadFile($('#' + this.id).attr('src'));
+					$('.element').css({
+						position: 'absolute',
+						opacity: 0
+					});
+				});
+			}
+
+			function iniciaCargador(event) {
+				$.each($('.element'), function() {
+					inicializar($('#' + this.id));
+				});
+				$('#cargando').show();
+				$('#cargando').css({
+					opacity: '1'
+				});
+				$('#cargando').fadeOut();
+				$('#contenedorMenu').css({
+					position: 'fixed'
+				});
+				muestraContenido();
+			}
+
+			function muestraContenido() {
+				$('#capa1')
+					.css({
+						display: 'block'
+					})
+					.show()
+					.animate(
+						{
+							opacity: 1
+						},
+						400
+					);
+				entra('#contenedorMenu');
+				entra('#img1');
+				entra('#carro1');
+				$('#carro1').css('z-index', 2);
+				$('#img14').css('z-index', 9);
+				$('#img15').css('z-index', 9);
+				$('#img11').css('z-index', 9);
+				$('#img23').css('z-index', 9);
+				$('#img26').css('z-index', 9);
+				animacion_entrada('#img2', 'default', 1);
+				animacion_entrada('#img7', 'der_izq', 1.5);
+				animacion_entrada('#img3', 'der_izq', 2);
+				animacion_entrada('#img4', 'arriba_abajo', 2.5);
+				animacion_entrada('#img5', 'arriba_abajo', 3);
+				animacion_entrada('#img6', 'arriba_abajo', 3.5);
+
+				$('#carro1').css('position', 'fixed');
+				$('#img31').click(function() {
+					page = 'seccion5.html';
+					parent.loadContent(page);
+				});
+			}
+			preload();
+		});
+	</script>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Copyright DJ 2019-->
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Content-Language" content="es" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Expires" content="0" />
+		<meta http-equiv="Last-Modified" content="0" />
+		<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<link rel="stylesheet" href="css/Reset.css" />
+		<link rel="stylesheet" href="css/estilos.css" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:700&display=swap" rel="stylesheet" />
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.jInvertScroll.min.js"></script>
+		<script src="js/tweenmax.min.js"></script>
+		<script src="js/preloadjs-0.6.2.min.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="js/main7.js"></script>
+		<title>Kidzania: La historia Interminable</title>
+		<style>
+			.voltear {
+				-moz-transform: scaleX(-1) !important;
+				-webkit-transform: scaleX(-1) !important;
+				transform: scaleX(-1) !important;
+				filter: FlipH !important;
+				-ms-filter: 'FlipH' !important;
+			}
+		</style>
+	</head>
+
+	<body onresize="location.reload()">
+		<div id="contenido">
+			<div class="capa1 scroll" _origenx="0" _origeny="0" _width="3708">
+				<img id="capa1" class="element" src="imagenes/seccion7/fondo.jpg" />
+				<div id="contenedorMenu" class="element" style="position: fixed;" _origenx="65" _origeny="300">
+					<div id="menuNav">
+						<span class="indice-text">Menu</span>
+						<div class="btnsNav">
+							<div id="btn1" class="navIndicador"></div>
+							<div id="btn1Tag" class="btnTag">Start</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn2" class="navIndicador"></div>
+							<div id="btn2Tag" class="btnTag">KidZania 0.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn3" class="navIndicador"></div>
+							<div id="btn3Tag" class="btnTag">KidZania 1.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn4" class="navIndicador"></div>
+							<div id="btn4Tag" class="btnTag">KidZania 2.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn5" class="navIndicador"></div>
+							<div id="btn5Tag" class="btnTag">KidZania 3.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn6" class="navIndicador"></div>
+							<div id="btn6Tag" class="btnTag">KidZania 4.0</div>
+						</div>
+						<div class="btnsNav">
+							<div id="btn7" class="navIndicador"></div>
+							<div id="btn7Tag" class="btnTag">KidZania 99.0</div>
+						</div>
+					</div>
+				</div>
+				<img id="img1" class="element" _origenx="125" _origeny="70" src="imagenes/seccion7/text_01.png" />
+				<img id="img2" class="element" _origenx="261" _origeny="479" src="imagenes/seccion7/img_01.png" />
+				<img id="img3" class="element" _origenx="175" _origeny="283" src="imagenes/seccion7/text_02.png" />
+				<img id="img4" class="element" _origenx="620" _origeny="306" src="imagenes/seccion7/text_03.png" />
+				<img id="img13" class="element" _origenx="1360" _origeny="146" src="imagenes/seccion7/text_05.png" />
+				<img id="img5" class="element" _origenx="667" _origeny="521" src="imagenes/seccion7/img_02.png" />
+				<img id="img6" class="element" _origenx="1063" _origeny="426" src="imagenes/seccion7/img_03.png" />
+				<img id="img10" class="element" _origenx="2063" _origeny="221" src="imagenes/seccion7/img_04.png" />
+				<img id="img7" class="element" _origenx="2665" _origeny="638" src="imagenes/seccion7/img_05.png" />
+				<img id="img8" class="element" _origenx="2690" _origeny="294" src="imagenes/seccion7/img_06.png" />
+				<img id="img9" class="element" _origenx="3172" _origeny="374" src="imagenes/seccion7/img_07.png" />
+				<img id="img11" class="element" _origenx="987" _origeny="241" src="imagenes/seccion7/text_04.png" />
+				<img id="img14" class="element" _origenx="2219" _origeny="457" src="imagenes/seccion7/text_06.png" />
+				<img id="img15" class="element" _origenx="2259" _origeny="165" src="imagenes/seccion7/text_07.png" />
+				<img id="img16" class="element" _origenx="2704" _origeny="429" src="imagenes/seccion7/text_08.png" />
+				<img id="img17" class="element" _origenx="3003" _origeny="170" src="imagenes/seccion7/text_09.png" />
+				<img id="img18" class="element" _origenx="3131" _origeny="763" src="imagenes/seccion7/text_10.png" />
+			</div>
+			<!-- cargador -->
+			<img id="cargando" class="cargando" src="imagenes/cargando.gif" />
+		</div>
+	</body>
+
+	<script>
+		$(document).ready(function() {
+			cacularEscala();
+			ajustarEscenario();
+			parent.set("cmi.core.lesson_location", "" + 7 + "");
+			parent.guardaAvance(7);
+
+			function preload() {
+				$('#cargando').fadeIn();
+				var preload = new createjs.LoadQueue();
+				preload.addEventListener('complete', iniciaCargador);
+				$.each($('.element'), function() {
+					preload.loadFile($('#' + this.id).attr('src'));
+					$('.element').css({
+						position: 'absolute',
+						opacity: 0
+					});
+				});
+			}
+
+			function iniciaCargador(event) {
+				$.each($('.element'), function() {
+					inicializar($('#' + this.id));
+				});
+				$('#cargando').show();
+				$('#cargando').css({
+					opacity: '1'
+				});
+				$('#cargando').fadeOut();
+				$('#contenedorMenu').css({
+					position: 'fixed'
+				});
+				muestraContenido();
+			}
+
+			function muestraContenido() {
+				$('#capa1')
+					.css({
+						display: 'block'
+					})
+					.show()
+					.animate(
+						{
+							opacity: 1
+						},
+						400
+					);
+				entra('#contenedorMenu');
+				animacion_entrada('#contenedorMenu', 'default', 0);
+				animacion_entrada('#img1', 'arriba_abajo', 0);
+				animacion_entrada('#img2', 'abajo_arriba', 0.5);
+				animacion_entrada('#img3', 'der_izq', 1);
+				animacion_entrada('#img4', 'der_izq', 1.5);
+				animacion_entrada('#img5', 'abajo_arriba', 2);
+				animacion_entrada('#img6', 'abajo_arriba', 2);
+				animacion_entrada('#img11', 'der_izq', 2);
+				animacion_entrada('#img13', 'arriba_abajo', 2);
+			}
+			preload();
+		});
+	</script>
+</html>
