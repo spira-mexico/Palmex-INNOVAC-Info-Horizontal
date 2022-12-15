@@ -35,6 +35,7 @@ $(window).scroll(function (event) {
   // console.log("- " + scrollTop);
 });
 
+
 function playContenidoDesk() {
   console.log("playContenidoDesk 🏄🏻‍♂️");
   if (navigator.userAgent.match(/Firefox/) || navigator.userAgent.match(/Edge/)) {
