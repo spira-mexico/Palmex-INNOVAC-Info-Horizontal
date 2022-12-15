@@ -1,0 +1,679 @@
+@font-face {
+  font-family: Gobold;
+  src: url("./Gobold/Gobold\ Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Gobold;
+  font-weight: bold;
+  src: url("./Gobold/Gobold\ Bold\ 2.otf") format("opentype");
+}
+body {
+  line-height: 1;
+  overflow-y: hidden;
+  /* overflow-x: hidden; */
+}
+/* 
+body::-webkit-scrollbar {
+ width: 20px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #E20810;
+  border-radius: 10px;
+} */
+
+.fondo_negro {
+  /* background-color: #000000; */
+  background-color: #fff;
+  width: 120vw;
+  height: 500vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+}
+
+.fondo {
+  background-color: #fff;
+  background-position: initial;
+  background-repeat: repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: row;
+  width: 1500%;
+}
+
+.gris{
+  filter: grayscale(100%);
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+li {
+  list-style: none;
+}
+
+/* Estilo de los elementos generales */
+
+.posAbsolute {
+  position: absolute;
+}
+
+.element {
+  position: absolute;
+}
+
+.centradoH {
+  margin: auto;
+}
+
+.centradoV {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.circulo {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.espacio1 {
+  width: 100vw;
+  height: calc(100vw * 940 / 1920);
+}
+
+.btn {
+  cursor: pointer !important;
+}
+.btn:hover {
+  filter: drop-shadow(2px 4px 12px rgb(169, 0, 0));
+}
+
+.btnActivo:hover {
+  cursor: pointer;
+  filter: drop-shadow(2px 4px 12px rgb(255, 234, 0));
+}
+
+.contain {
+  background-size: contain !important;
+}
+
+.display {
+  opacity: 1;
+  display: block;
+}
+
+.espacioFull {
+  width: 100vw;
+  height: 100vh;
+}
+
+.contentIMG {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.contentIMG_cover {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #e6e6e6;
+  background-position: center;
+}
+
+.contentIMG_contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.video {
+  position: absolute !important;
+  width: 100% !important;
+  height: 37vh !important;
+}
+.content-video {
+  position: relative;
+  top: 30%;
+  left: 0%;
+  height: 50%;
+  width: 100%;
+}
+
+.pop {
+  background-color: #024fa8b3;
+}
+
+.lineaRoja {
+  background: #cf0109;
+  height: 2px;
+  width: 30vw;
+  -ms-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 100vw;
+}
+
+.con_sombra {
+  box-shadow: 0px 0px 5px #000;
+}
+
+.recorte {
+  overflow: hidden;
+}
+
+.circulo_centrado {
+  border-radius: 50%;
+  -ms-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.texto_derecha {
+  text-align: right;
+}
+
+.texto_izquierda {
+  text-align: left;
+}
+
+.texto_centrado {
+  text-align: center;
+}
+
+.titulo1 {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 33vw;
+  font-size: 11vw;
+}
+.titulo2 {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 660%;
+  margin-top: 43%;
+}
+.titulo3 {
+  font-family: "Oswald", sans-serif;
+  color: #4351e0;
+  text-align: center;
+  margin-top: 4vw;
+  font-size: 19vw;
+}
+.titulo4 {
+  font-family: "Oswald", sans-serif;
+  color: #4351e0;
+  text-align: center;
+  margin-top: -3vw;
+  font-size: 19vw;
+}
+
+#indicadores_box1 {
+  top: 100vh;
+}
+
+#indicadores_box2 {
+  top: 100vh;
+  left: 100vw;
+}
+
+#indicadores_box3 {
+  top: 200vh;
+  left: 100vw;
+}
+.estilo {
+  margin-top: 0vw;
+  margin-left: 0vw;
+  width: 100vw;
+  height: 100%;
+}
+.popup {
+  background-size: contain !important;
+  background-position: center center !important;
+  margin-top: 0vw;
+  margin-left: 0vw;
+  width: 100vw;
+  height: 100%;
+}
+#animacionBotellas {
+  background-image: url("img01.png");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /*background-position: 0 -790px;*/
+}
+
+.animacion {
+  animation: play 1s steps(9) infinite;
+}
+
+/* movimiento arriba abajo */
+.up-to-down {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-90px);
+  }
+}
+@keyframes play {
+  100% {
+    background-position: 0 -7110px;
+  }
+}
+
+.indicadores_text {
+  font-family: "Lato", sans-serif;
+  color: #1d1d1d;
+  font-size: 1.2vw;
+}
+
+.indicadores_numero {
+  font-size: 4.8vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: #cf0109;
+}
+
+.indicadores_numero1 {
+  font-size: 2.4vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: #cf0109;
+}
+
+.indicadores_numero2 {
+  font-size: 3.4vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: #cf0109;
+}
+
+.indicadores_numero3 {
+  font-size: 4vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: #cf0109;
+}
+
+.indicadores_numero4 {
+  font-size: 6vw;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  color: #cf0109;
+}
+
+.impactados_text {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 2vw;
+}
+
+.impactados_text {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  font-size: 2vw;
+}
+
+.impactados_numero {
+  font-size: 6vw;
+  font-family: "Acme";
+  color: #fff;
+}
+
+.page {
+  /*background-color: white;*/
+  position: relative;
+  overflow: hidden;
+  margin-top: -1px;
+}
+.pageScroll {
+  /*background-color: white;*/
+  position: relative;
+  overflow: scroll;
+}
+
+.page > div {
+  position: absolute;
+}
+
+#portrait_message {
+  position: fixed;
+  display: none;
+  z-index: 10;
+}
+
+#Fecha {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  font-size: 0.7rem;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 0px;
+}
+
+/* Estilo de Menú general */
+
+#contenedorMenu {
+  position: fixed;
+  width: 100vw;
+  height: 0vh;
+  top: 0px;
+  left: 0px;
+  /* background-color: aquamarine; */
+  display: none;
+}
+
+#menu {
+  width: 95px;
+  height: 350px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 25vh;
+  left: 0px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.btnTag {
+  left: 17px;
+  top: -10px;
+  height: 50px;
+  width: 350px;
+  position: relative;
+  display: none;
+}
+
+.btnDev {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 255, 255, 0.03);
+  position: absolute;
+  z-index: 9;
+}
+
+.btnMenu {
+  /* background-color: rgb(255, 0, 0, 0.4); */
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 37px;
+  margin-top: 20px;
+  top: -45px;
+  left: 80px;
+  display: none;
+}
+
+
+#btn1Tag {
+  background-image: url("../images/interfaz/btn01.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn2Tag {
+  background-image: url("../images/interfaz/btn02.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn3Tag {
+  background-image: url("../images/interfaz/btn03.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn4Tag {
+  background-image: url("../images/interfaz/btn04.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn5Tag {
+  background-image: url("../images/interfaz/btn05.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn6Tag {
+  background-image: url("../images/interfaz/btn06.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn7Tag {
+  background-image: url("../images/interfaz/btn07.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn8Tag {
+  background-image: url("../images/interfaz/btn08.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#btnColores {
+  background-image: url("../images/interfaz/btn_colores.png");
+  background-repeat: no-repeat;
+  width: 11%;
+  height: 18%;
+  background-size: contain;
+  background-position: center center;
+  top: 82%;
+  left: 92%;
+  position: fixed;
+  display: none;
+}
+#btnIEX {
+  background-image: url("../images/interfaz/btn_iex.svg");
+  background-repeat: no-repeat;
+  width: 15%;
+  height: 17%;
+  background-size: contain;
+  background-position: center center;
+  top: 14%;
+  left: 90%;
+  position: fixed;
+  display: none;
+}
+#plecaNombre {
+  background-image: url("../images/interfaz/pleca_nombre.png");
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  width: 23%;
+  height: 10%;
+  background-size: contain;
+  background-position: center center;
+  top: 0%;
+  left: 78%;
+  position: fixed;
+  display: none;
+}
+
+@media only screen and (orientation: landscape) and (max-width: 900px) {
+  #menu {
+    width: 45px;
+    height: 250px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 60px;
+    left: 0px;
+    position: relative;
+  }
+  .btnMenu {
+    /* background-color: rgb(255, 0, 0, 0.4); */
+    width: 55%;
+    height: 9.1%;
+    top: -10%;
+    left: 50%;
+    margin-top: 40%;
+  }
+  #btn1Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn2Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn3Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn4Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn5Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn6Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn7Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn8Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+}
+
+.btndescarga {
+  z-index: 999;
+  cursor: pointer;
+  width: 7%;
+  height: 17%;
+  top: 1.4vw;
+  right: -12.2vw;
+  position: relative;
+  background-color: rgba(14, 65, 231, 0);
+}
+
+/* Aqui se configuran los estilos de Bootstrap */
+.modal-content {
+  background-color: transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0rem;
+}
+.modal-backdrop {
+  /* background-image: url("../images/interfaz/fondo_popup.png"); */
+  background-color: #5c5c5c9b;
+}
+.modal-backdrop.show {
+  opacity: 0.9;
+}
+
+.modal-xl {
+  width: 90%;
+  max-width: 1200px;
+}
+.img-size {
+  width: 100%;
+}
+.carousel-indicators {
+  bottom: -20px;
+}
+.carousel-indicators .active {
+  background-color: #d60000;
+}
+.carousel-indicators li {
+  background-color: rgb(146 146 146);
+}
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0rem;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+}
+
+@media screen and (orientation: portrait) {
+  #portrait_message {
+    display: block;
+  }
+}
+.flex {
+  display: inline-flex;
+}

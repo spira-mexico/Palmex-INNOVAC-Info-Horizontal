@@ -18,9 +18,9 @@
 	<organizations default="CURSO">
 		<organization identifier="CURSO">
 		<!-- <title> ES EL TITULO PARA LMS O SCORM -->
-			<title>Cambia_titulo</title> 
+			<title> Palmex </title> 
 			<item identifier="item0" identifierref="ref01">
-				<title>Cambia_titulo</title>
+				<title> Sales and Operations </title>
 			</item>
 
 		</organization>
@@ -29,8 +29,8 @@
 		<resource identifier="ref01" type="webcontent" adlcp:scormtype="sco" href="sco/index.html"></resource>
 	</resources> -->
 	<resources>
-		<resource identifier="ref01" type="webcontent" href="index.html" adlcp:scormtype="sco">
-			<file href="index.html" />
+		<resource identifier="ref01" type="webcontent" href="./index.html" adlcp:scormtype="sco">
+			<file href="./index.html" />
 		</resource>
 	</resources>
 
