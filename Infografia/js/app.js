@@ -76,10 +76,10 @@ function checkProgress() {
   }
   switch (curseStatus) {
     case "not attempted":
-      loadContent("index.html");
+      loadContent("secciones.html");
       break;
     case "completed":
-      loadContent("index.html");
+      loadContent("secciones.html");
       break;
     case "incomplete":
       var lastPage;
@@ -93,16 +93,18 @@ function checkProgress() {
       guardaAvance(0);
       if (lastPage == "null" || lastPage == "undefined" || lastPage == "") {
         lastPage = 0;
-        loadContent("index.html");
+        // loadContent("index.html");
+        loadContent("secciones.html");
       } else {
         console.log("Última página: " + lastPage);
         switch (parseInt(lastPage)) {
           case 0:
-            loadContent("index.html");
+            // loadContent("index.html");
+            loadContent("secciones.html");
             break;
           case 1:
             guardaAvance(1);
-            loadContent("seccion1.html");
+            loadContent("secciones.html");
             break;
           case 2:
             guardaAvance(2);
@@ -129,34 +131,34 @@ function checkProgress() {
             loadContent("seccion7.html");
             break;
           default:
-            loadContent("index.html");
+            loadContent("secciones.html");
             break;
         }
       }
       break;
     case "passed":
-      loadContent("index.html");
+      loadContent("secciones.html");
       alert("passed");
       break;
     case "failed":
-      loadContent("index.html");
+      loadContent("secciones.html");
       alert("failed");
       break;
     case "unknown":
-      loadContent("index.html");
+      loadContent("secciones.html");
       alert("unknown");
       break;
     default:
       alert("Error: No se encuentra ningun lms");
-      loadContent("index.html");
+      loadContent("secciones.html");
       break;
   }
   //lmsCall("SetValue","cmi.comments",""+course.pages.length+"");
 }
 
 function setScale() {
-  var sourceHeigth = 990; //Tambien cambiar en scrips.js 6
   var sourceWidth = 1900; //Tambien cambiar en scrips.js 7
+  var sourceHeigth = 900; //Tambien cambiar en scrips.js 6
   var contentHeigth = $(window).height();
   var contentWidth = $(window).width();
   var _scaleX = contentWidth / sourceWidth;
@@ -182,8 +184,10 @@ function setScale() {
         scaleTemplate = scaleTemplate - .05;
     }*/
   $("#box").height(sourceHeigth * scaleTemplate);
+  // $("#box").height("100vh");
   $("#box").width(sourceWidth * scaleTemplate);
   $("#box").css("margin-top", "-" + (sourceHeigth * scaleTemplate) / 2 + "px");
+  // $("#box").css("margin-top", 0);
   $("#box").css("margin-left", "-" + (sourceWidth * scaleTemplate) / 2 + "px");
 
   $(".top").css("-ms-transform-origin", "0 0");
@@ -216,7 +220,7 @@ function setScale() {
   $(".botonAdelante").css("transform-origin", "150% 0");
 
   $("#content").css({
-    "padding-right": "20px"
+    "padding-right": "20px",
   });
 
   // console.log("Espacio :" + contentWidth + "px, " + contentHeigth + "px");
@@ -235,26 +239,26 @@ function actualizaDatos() {
   $(".element").css("opacity", 0);
 
   $("#botonAtras, #botonAdelante").css({
-    cursor: "pointer"
+    cursor: "pointer",
   });
 
   $("#botonAtras")
     .hammer()
-    .on("touch", function() {
+    .on("touch", function () {
       var elContenido = document.getElementById("com");
       elContenido.contentWindow.retrocede();
       $(this).attr("src", "imagenes/botonAtrasPressed.png");
     });
   $("#botonAdelante")
     .hammer()
-    .on("touch", function() {
+    .on("touch", function () {
       var elContenido = document.getElementById("com");
       elContenido.contentWindow.avanza();
       $(this).attr("src", "imagenes/botonAdelantePressed.png");
     });
   $("#botonAdelante, #botonAtras")
     .hammer()
-    .on("release", function() {
+    .on("release", function () {
       var elContenido = document.getElementById("com");
       elContenido.contentWindow.detiene();
       $("#botonAtras").attr("src", "imagenes/botonAtras.png");
@@ -271,21 +275,21 @@ function actualizaDatos() {
   // });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   // bloquear botones del mouse
-  $(document).mousedown(function(e) {
+  $(document).mousedown(function (e) {
     // console.log(e.which);
 
     if (e.which == 2) {
       return false;
     }
-    $(document).bind("contextmenu", function(e) {
+    $(document).bind("contextmenu", function (e) {
       return false;
     });
   });
-  $("html, body").on("touchstart touchmove", function(e) {
+  $("html, body").on("touchstart touchmove", function (e) {
     e.preventDefault();
   });
 });
 
-$(window).unload(function() {});
+$(window).unload(function () {});

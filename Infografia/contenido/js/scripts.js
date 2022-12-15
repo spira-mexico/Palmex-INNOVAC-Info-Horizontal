@@ -2,8 +2,8 @@
 
 var styleVersions = new Array('-ms-', '-webkit-', '-moz-', '-o-', '');
 var scalePage = 1;
-var pageHeight = 990; //Tambien cambiar en app.js 35
-var pegeWidth = 1900; //Tambien cambiar en app.js 36
+var pegeWidth = 1900; //Tambien cambiar en app.js setScale()
+var pageHeight = 900; //Tambien cambiar en app.js setScale()
 var cargandoHeight = 50;
 var cargandoWidth = 50;
 var volPage = 100;
