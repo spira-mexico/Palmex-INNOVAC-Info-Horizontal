@@ -23,7 +23,7 @@
     </iframe>
     <script>
       $(document).ready(function () {
-        // $("#content").attr("src", "vertical.html");
+        // $("#content").attr("src", "horizontal.html");
         var supportsOrientationChange = "onorientationchange" in window,
           orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
         window.addEventListener(
@@ -44,7 +44,7 @@
         }
         if (window.matchMedia("(orientation: landscape)").matches) {
           console.log("%c LANDSCAPE", "font-size: 100%; color: #ff7e29; font-weight: 700;");
-          $("#content").attr("src", "vertical.html");
+          $("#content").attr("src", "horizontal.html");
           document.getElementById("content").style.display = "block";
           document.getElementById("voltear").style.display = "none";
           // window.loadContent();
