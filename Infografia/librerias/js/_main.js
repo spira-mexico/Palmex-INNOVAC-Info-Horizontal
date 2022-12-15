@@ -10,6 +10,11 @@ var finalizado = false;
 console.log("%c" + fechaLog, "font-size: 100%; color: #00ff22; font-weight: 700;");
 $(document).ready(function () {
   console.log("ready!");
+  // $.jInvertScroll(["#content_scroll"], {
+  //   onScroll: function (percent) {
+  //     console.log(percent);
+  //   },
+  // });
   $("#Fecha")
     .html("<p>" + ELID + "</p>")
     .hover(function () {
@@ -34,7 +39,6 @@ $(window).scroll(function (event) {
   // scrollTop = $(window).scrollTop();
   // console.log("- " + scrollTop);
 });
-
 
 function playContenidoDesk() {
   console.log("playContenidoDesk 🏄🏻‍♂️");
