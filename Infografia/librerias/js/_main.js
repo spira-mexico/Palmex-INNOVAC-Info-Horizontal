@@ -322,16 +322,83 @@ function slide7(i) {
         entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
         entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
         entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img5"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img6"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img7"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img8"), "default", 1, 0.6);
         entrar($("#nom" + i + "_mano1"), "default", 1, 0.8);
         entrar($("#nom" + i + "_btn1"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn2"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn3"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn4"), "default", 1, 1);
       }
     })
     .on("enter leave", function () {
       console.log("nom" + i + "");
+      var modal1 = false;
+      var modal2 = false;
+      var modal3 = false;
+      var modal4 = false;
+
+      // Abrir Modal 🟩
+      $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
+        stop($("#nom" + i + "_mano1"), 0);
+        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        $("#modal1P7").modal("show");
+      });
+      $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
+        stop($("#nom" + i + "_mano2"), 0);
+        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        $("#modal2P7").modal("show");
+      });
+      $("#nom" + i + "_btn3, #nom" + i + "_mano3").click(function () {
+        stop($("#nom" + i + "_mano3"), 0);
+        salida($("#nom" + i + "_mano3"), "default", 0, 0);
+        $("#modal3P7").modal("show");
+      });
+      $("#nom" + i + "_btn4, #nom" + i + "_mano4").click(function () {
+        stop($("#nom" + i + "_mano4"), 0);
+        salida($("#nom" + i + "_mano4"), "default", 0, 0);
+        $("#modal4P7").modal("show");
+      });
+
+      // Cuando los modales se cierran 🟩
+      $("#modal1P7").on("hidden.bs.modal", function () {
+        console.log("Sale modal1P7");
+        modal2 == false ? entrar($("#nom" + i + "_mano2"), "default", 1, 0) : console.log("visto");
+        modal2 = true;
+      });
+      $("#modal2P7").on("hidden.bs.modal", function () {
+        console.log("Sale modal2P7");
+        modal3 == false ? entrar($("#nom" + i + "_mano3"), "default", 1, 0) : console.log("visto");
+        modal3 = true;
+      });
+      $("#modal3P7").on("hidden.bs.modal", function () {
+        console.log("Sale modal3P7");
+        modal4 == false ? entrar($("#nom" + i + "_mano4"), "default", 1, 0) : console.log("visto");
+        modal4 = true;
+      });
+      $("#modal4P7").on("hidden.bs.modal", function () {
+        console.log("Sale modal4P7");
+      });
+
+      // Boton de cerrar modal 🟩
+      $("#cerrar1P7").click(function () {
+        $("#modal1P7").modal("hide");
+      });
+      $("#cerrar2P7").click(function () {
+        $("#modal2P7").modal("hide");
+      });
+      $("#cerrar3P7").click(function () {
+        $("#modal3P7").modal("hide");
+      });
+      $("#cerrar4P7").click(function () {
+        $("#modal4P7").modal("hide");
+      });
     }); //
   return processScene(scene);
 }
-
 
 // Pantalla 🟧 X 🟧
 // slideX(X).addTo(controller);

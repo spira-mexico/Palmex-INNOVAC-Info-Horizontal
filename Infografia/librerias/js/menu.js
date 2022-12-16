@@ -7,7 +7,7 @@
   var noObjetos = 8;
   var cualBotonEntra;
   var cualBotonSale;
-  var pageDev = 6;
+  var pageDev = 7;
 
   const goPage1 = 2;
   const goPage2 = 3;
