@@ -292,7 +292,7 @@ function slide6(i) {
       vistos[i] = 1;
       function animar() {
         entrar($("#nom" + i + "_bg"), "default", 0, 0);
-        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img1"), "izq", 1, 0.2);
         entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
         entrar($("#nom" + i + "_img3"), "izq", 1, 0.6);
         entrar($("#nom" + i + "_img4"), "izq", 1, 0.8);
@@ -319,7 +319,7 @@ function slide7(i) {
       vistos[i] = 1;
       function animar() {
         entrar($("#nom" + i + "_bg"), "default", 0, 0);
-        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img1"), "izq", 1, 0.2);
         entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
         entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
         entrar($("#nom" + i + "_img4"), "default", 1, 0.6);
@@ -327,7 +327,7 @@ function slide7(i) {
         entrar($("#nom" + i + "_img6"), "default", 1, 0.6);
         entrar($("#nom" + i + "_img7"), "default", 1, 0.6);
         entrar($("#nom" + i + "_img8"), "default", 1, 0.6);
-        entrar($("#nom" + i + "_mano1"), "default", 1, 0.8);
+        entrar($("#nom" + i + "_mano1"), "sheker2", 1, 0.8);
         entrar($("#nom" + i + "_btn1"), "default", 1, 1);
         entrar($("#nom" + i + "_btn2"), "default", 1, 1);
         entrar($("#nom" + i + "_btn3"), "default", 1, 1);
@@ -366,17 +366,17 @@ function slide7(i) {
       // Cuando los modales se cierran 🟩
       $("#modal1P7").on("hidden.bs.modal", function () {
         console.log("Sale modal1P7");
-        modal2 == false ? entrar($("#nom" + i + "_mano2"), "default", 1, 0) : console.log("visto");
+        modal2 == false ? entrar($("#nom" + i + "_mano2"), "sheker2", 1, 0) : console.log("visto");
         modal2 = true;
       });
       $("#modal2P7").on("hidden.bs.modal", function () {
         console.log("Sale modal2P7");
-        modal3 == false ? entrar($("#nom" + i + "_mano3"), "default", 1, 0) : console.log("visto");
+        modal3 == false ? entrar($("#nom" + i + "_mano3"), "sheker2", 1, 0) : console.log("visto");
         modal3 = true;
       });
       $("#modal3P7").on("hidden.bs.modal", function () {
         console.log("Sale modal3P7");
-        modal4 == false ? entrar($("#nom" + i + "_mano4"), "default", 1, 0) : console.log("visto");
+        modal4 == false ? entrar($("#nom" + i + "_mano4"), "sheker2", 1, 0) : console.log("visto");
         modal4 = true;
       });
       $("#modal4P7").on("hidden.bs.modal", function () {
@@ -396,6 +396,324 @@ function slide7(i) {
       $("#cerrar4P7").click(function () {
         $("#modal4P7").modal("hide");
       });
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 8 🟧
+slide8(8).addTo(controller);
+function slide8(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "izq", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img5"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img6"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img7"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img8"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_mano1"), "sheker2", 1, 0.8);
+        entrar($("#nom" + i + "_btn1"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn2"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn3"), "default", 1, 1);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+      var modal1 = false;
+      var modal2 = false;
+      var modal3 = false;
+
+      // Abrir Modal 🟩
+      $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
+        stop($("#nom" + i + "_mano1"), 0);
+        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        $("#modal1P8").modal("show");
+      });
+      $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
+        stop($("#nom" + i + "_mano2"), 0);
+        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        $("#modal2P8").modal("show");
+      });
+      $("#nom" + i + "_btn3, #nom" + i + "_mano3").click(function () {
+        stop($("#nom" + i + "_mano3"), 0);
+        salida($("#nom" + i + "_mano3"), "default", 0, 0);
+        $("#modal3P8").modal("show");
+      });
+
+      // Cuando los modales se cierran 🟩
+      $("#modal1P8").on("hidden.bs.modal", function () {
+        console.log("Sale modal1P8");
+        modal2 == false ? entrar($("#nom" + i + "_mano2"), "sheker2", 1, 0) : console.log("visto");
+        modal2 = true;
+      });
+      $("#modal2P8").on("hidden.bs.modal", function () {
+        console.log("Sale modal2P8");
+        modal3 == false ? entrar($("#nom" + i + "_mano3"), "sheker2", 1, 0) : console.log("visto");
+        modal3 = true;
+      });
+      $("#modal3P8").on("hidden.bs.modal", function () {
+        console.log("Sale modal3P8");
+      });
+
+      // Boton de cerrar modal 🟩
+      $("#cerrar1P8").click(function () {
+        $("#modal1P8").modal("hide");
+      });
+      $("#cerrar2P8").click(function () {
+        $("#modal2P8").modal("hide");
+      });
+      $("#cerrar3P8").click(function () {
+        $("#modal3P8").modal("hide");
+      });
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 9 🟧
+slide9(9).addTo(controller);
+function slide9(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "izq", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img5"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img6"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img7"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img8"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_mano1"), "sheker2", 1, 0.8);
+        entrar($("#nom" + i + "_btn1"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn2"), "default", 1, 1);
+        entrar($("#nom" + i + "_btn3"), "default", 1, 1);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+      var modal1 = false;
+      var modal2 = false;
+      var modal3 = false;
+
+      // Abrir Modal 🟩
+      $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
+        stop($("#nom" + i + "_mano1"), 0);
+        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        $("#modal1P9").modal("show");
+      });
+      $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
+        stop($("#nom" + i + "_mano2"), 0);
+        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        $("#modal2P9").modal("show");
+      });
+      $("#nom" + i + "_btn3, #nom" + i + "_mano3").click(function () {
+        stop($("#nom" + i + "_mano3"), 0);
+        salida($("#nom" + i + "_mano3"), "default", 0, 0);
+        $("#modal3P9").modal("show");
+      });
+
+      // Cuando los modales se cierran 🟩
+      $("#modal1P9").on("hidden.bs.modal", function () {
+        console.log("Sale modal1P9");
+        modal2 == false ? entrar($("#nom" + i + "_mano2"), "sheker2", 1, 0) : console.log("visto");
+        modal2 = true;
+      });
+      $("#modal2P9").on("hidden.bs.modal", function () {
+        console.log("Sale modal2P9");
+        modal3 == false ? entrar($("#nom" + i + "_mano3"), "sheker2", 1, 0) : console.log("visto");
+        modal3 = true;
+      });
+      $("#modal3P9").on("hidden.bs.modal", function () {
+        console.log("Sale modal3P9");
+      });
+
+      // Boton de cerrar modal 🟩
+      $("#cerrar1P9").click(function () {
+        $("#modal1P9").modal("hide");
+      });
+      $("#cerrar2P9").click(function () {
+        $("#modal2P9").modal("hide");
+      });
+      $("#cerrar3P9").click(function () {
+        $("#modal3P9").modal("hide");
+      });
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 10 🟧
+slide10(10).addTo(controller);
+function slide10(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "izq", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img6"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 11 🟧
+slide11(11).addTo(controller);
+function slide11(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "arriba", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img6"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+        entrar($("#nom" + i + "_img8"), "izq", 1, 1.6);
+        entrar($("#nom" + i + "_img9"), "izq", 1, 1.8);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 12 🟧
+slide12(12).addTo(controller);
+function slide12(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "arriba", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img6"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 13 🟧
+slide13(13).addTo(controller);
+function slide13(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "arriba", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img6"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+        entrar($("#nom" + i + "_img8"), "izq", 1, 1.6);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 14 🟧
+slide14(14).addTo(controller);
+function slide14(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "arriba", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img6"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+        entrar($("#nom" + i + "_img8"), "izq", 1, 1.6);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 15 🟧
+slide15(15).addTo(controller);
+function slide15(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "default", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "arriba", 1, 1);
+        entrar($("#nom" + i + "_img6"), "arriba", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+        entrar($("#nom" + i + "_img8"), "abajo", 1, 1.6);
+        entrar($("#nom" + i + "_img9"), "der", 1, 1.8);
+        entrar($("#nom" + i + "_img10"), "der", 1, 2);
+        entrar($("#nom" + i + "_img11"), "abajo", 1, 2.2);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
     }); //
   return processScene(scene);
 }

@@ -4,10 +4,10 @@
 
   ///////////////// 🎯 Actividad 🎯 ////////////////
 
-  var noObjetos = 8;
+  var noObjetos = 10;
   var cualBotonEntra;
   var cualBotonSale;
-  var pageDev = 7;
+  var pageDev = 15;
 
   const goPage1 = 2;
   const goPage2 = 3;
@@ -23,7 +23,7 @@
   //   cualBotonEntra = parseInt($(this).attr("id").substr(3, 2));
   //   $("#btn" + cualBotonEntra + "Tag").css("display", "block");
   // });
-  
+
   // $("#btn" + i).mouseleave(function () {
   //   cualBotonSale = parseInt($(this).attr("id").substr(3, 2));
   //   $("#btn" + cualBotonSale + "Tag").css("display", "none");
@@ -61,28 +61,33 @@
   });
 
   $("#btn1").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage1).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage1).offset().left - 45 }, 1000);
   });
   $("#btn2").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage2).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage2).offset().left - 45 }, 1000);
   });
   $("#btn3").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage3).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage3).offset().left - 45 }, 1000);
   });
   $("#btn4").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage4).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage4).offset().left - 45 }, 1000);
   });
   $("#btn5").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage5).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage5).offset().left - 45 }, 1000);
   });
   $("#btn6").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage6).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage6).offset().left - 45 }, 1000);
   });
   $("#btn7").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage7).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage7).offset().left - 45 }, 1000);
   });
   $("#btn8").click(function () {
-    $("html").animate({ scrollLeft: $("#nom"+goPage8).offset().left - 45 }, 1000);
+    $("html").animate({ scrollLeft: $("#nom" + goPage8).offset().left - 45 }, 1000);
   });
- 
+  $("#btn9").click(function () {
+    $("html").animate({ scrollLeft: $("#nom" + goPage9).offset().left - 45 }, 1000);
+  });
+  $("#btn10").click(function () {
+    $("html").animate({ scrollLeft: $("#nom" + goPage10).offset().left - 45 }, 1000);
+  });
 })();

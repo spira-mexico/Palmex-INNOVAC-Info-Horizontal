@@ -444,9 +444,9 @@ li {
 
 .btnTag {
   left: 17px;
-  top: -10px;
+  top: -115px;
   height: 50px;
-  width: 350px;
+  width: 580px;
   position: relative;
   display: none;
 }
@@ -509,6 +509,16 @@ li {
 }
 #btn8Tag {
   background-image: url("../images/interfaz/btn08.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn9Tag {
+  background-image: url("../images/interfaz/btn09.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#btn10Tag {
+  background-image: url("../images/interfaz/btn10.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -606,6 +616,16 @@ li {
     height: 40px;
   }
   #btn8Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn9Tag {
+    left: 20px;
+    top: 13px;
+    height: 40px;
+  }
+  #btn10Tag {
     left: 20px;
     top: 13px;
     height: 40px;
