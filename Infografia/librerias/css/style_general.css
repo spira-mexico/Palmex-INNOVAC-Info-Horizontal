@@ -10,17 +10,17 @@
 }
 body {
   line-height: 1;
-  overflow-y: hidden;
+  overflow-y:  hidden;
   /* overflow-x: hidden; */
 }
-/* 
+
 body::-webkit-scrollbar {
- width: 20px;
+  height: 10px;
 }
 body::-webkit-scrollbar-thumb {
   background: #E20810;
   border-radius: 10px;
-} */
+}
 
 .fondo_negro {
   /* background-color: #000000; */
