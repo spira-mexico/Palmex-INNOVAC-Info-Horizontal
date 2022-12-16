@@ -10,11 +10,7 @@ var finalizado = false;
 console.log("%c" + fechaLog, "font-size: 100%; color: #00ff22; font-weight: 700;");
 $(document).ready(function () {
   console.log("ready!");
-  // $.jInvertScroll(["#content_scroll"], {
-  //   onScroll: function (percent) {
-  //     console.log(percent);
-  //   },
-  // });
+
   $("#Fecha")
     .html("<p>" + ELID + "</p>")
     .hover(function () {
@@ -25,6 +21,11 @@ $(document).ready(function () {
     $(this).css({ color: "black" });
   });
   init(); // Iniciar conexion con LMS
+});
+
+$("html").mousewheel(function (e, delta) {
+  e.preventDefault();
+  this.scrollLeft -= delta;
 });
 
 // Evento Scroll
@@ -252,22 +253,85 @@ function slide5(i) {
         entrar($("#nom" + i + "_bg"), "default", 0, 0);
         entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
         entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "izq", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "izq", 1, 0.8);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img8"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_mano1"), "sheker2", 1, 1.4);
+        entrar($("#nom" + i + "_btn1"), "default", 1, 1.6);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+
+      // Botones 🟩
+      $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
+        stop($("#nom" + i + "_mano1"), 0);
+        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        entrar($("#nom" + i + "_img6"), "der", 1, 0);
+        entrar($("#nom" + i + "_btn2"), "default", 1, 1);
+        entrar($("#nom" + i + "_mano2"), "sheker2", 1, 1.2);
+      });
+      $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
+        stop($("#nom" + i + "_mano2"), 0);
+        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        entrar($("#nom" + i + "_img5"), "der", 1, 0);
+      });
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 6 🟧
+slide6(6).addTo(controller);
+function slide6(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
+        entrar($("#nom" + i + "_img3"), "izq", 1, 0.6);
+        entrar($("#nom" + i + "_img4"), "izq", 1, 0.8);
+        entrar($("#nom" + i + "_img5"), "izq", 1, 1);
+        entrar($("#nom" + i + "_img6"), "izq", 1, 1.2);
+        entrar($("#nom" + i + "_img7"), "izq", 1, 1.4);
+        entrar($("#nom" + i + "_img8"), "izq", 1, 1.6);
+      }
+    })
+    .on("enter leave", function () {
+      console.log("nom" + i + "");
+    }); //
+  return processScene(scene);
+}
+
+// Pantalla 🟧 7 🟧
+slide7(7).addTo(controller);
+function slide7(i) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#nom" + i + "",
+  })
+    .on("enter", function () {
+      vistos[i] == 0 ? animar() : console.log("👀" + i);
+      vistos[i] = 1;
+      function animar() {
+        entrar($("#nom" + i + "_bg"), "default", 0, 0);
+        entrar($("#nom" + i + "_img1"), "default", 1, 0.2);
+        entrar($("#nom" + i + "_img2"), "default", 1, 0.4);
         entrar($("#nom" + i + "_img3"), "default", 1, 0.6);
-        entrar($("#nom" + i + "_img4"), "default", 1, 0.6);
-        entrar($("#nom" + i + "_img5"), "default", 1, 0.6);
-        entrar($("#nom" + i + "_img6"), "default", 1, 0.6);
-        entrar($("#nom" + i + "_img7"), "default", 1, 0.6);
-        entrar($("#nom" + i + "_img8"), "default", 1, 0.6);
         entrar($("#nom" + i + "_mano1"), "default", 1, 0.8);
         entrar($("#nom" + i + "_btn1"), "default", 1, 1);
       }
     })
     .on("enter leave", function () {
       console.log("nom" + i + "");
-      
     }); //
   return processScene(scene);
 }
+
 
 // Pantalla 🟧 X 🟧
 // slideX(X).addTo(controller);
