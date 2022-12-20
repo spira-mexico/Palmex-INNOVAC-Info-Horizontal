@@ -129,6 +129,7 @@ li {
 .espacio1 {
   width: 100vw;
   height: calc(100vw * 940 / 1920);
+  /* height: 99vh; */
 }
 
 .btn {
@@ -388,7 +389,7 @@ li {
   /*background-color: white;*/
   position: relative;
   overflow: hidden;
-  margin-top: -1px;
+  margin-top: 0px;
 }
 .pageScroll {
   /*background-color: white;*/
@@ -508,19 +509,17 @@ li {
   background-size: contain;
 }
 #btn8Tag {
-  background-image: url("../images/interfaz/btn08.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-#btn9Tag {
   background-image: url("../images/interfaz/btn09.png");
   background-repeat: no-repeat;
   background-size: contain;
+  /* TODO */
+  height: 70px;
 }
-#btn10Tag {
+#btn9Tag {
   background-image: url("../images/interfaz/btn10.png");
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: 38px;
 }
 
 #btnColores {

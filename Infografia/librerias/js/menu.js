@@ -9,14 +9,15 @@
   var cualBotonSale;
   var pageDev = 15;
 
-  const goPage1 = 2;
+  const goPage1 = 1;
   const goPage2 = 3;
-  const goPage3 = 4;
-  const goPage4 = 9;
-  const goPage5 = 12;
-  const goPage6 = 13;
-  const goPage7 = 14;
-  const goPage8 = 15;
+  const goPage3 = 6;
+  const goPage4 = 7;
+  const goPage5 = 8;
+  const goPage6 = 9;
+  const goPage7 = 10;
+  const goPage8 = 11;
+  const goPage9 = 15;
 
   // for (let i = 0; i <= noObjetos; i++) {
   // $("#btn" + i).mouseenter(function () {
@@ -86,8 +87,5 @@
   });
   $("#btn9").click(function () {
     $("html").animate({ scrollLeft: $("#nom" + goPage9).offset().left - 45 }, 1000);
-  });
-  $("#btn10").click(function () {
-    $("html").animate({ scrollLeft: $("#nom" + goPage10).offset().left - 45 }, 1000);
   });
 })();
