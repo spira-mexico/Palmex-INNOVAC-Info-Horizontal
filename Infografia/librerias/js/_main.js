@@ -30,14 +30,12 @@ if (navigator.appVersion.indexOf("Mac") != -1) os = "MacOS";
 if (navigator.appVersion.indexOf("X11") != -1) os = "UNIX";
 if (navigator.appVersion.indexOf("Linux") != -1) os = "Linux";
 
-console.log(os);
-
 $("html").mousewheel(function (e, delta) {
   e.preventDefault();
   if (os == "Windows") {
     this.scrollLeft -= delta * 40;
   } else {
-    this.scrollLeft -= delta * 1;
+    this.scrollLeft -= delta;
   }
 });
 
@@ -279,15 +277,15 @@ function slide5(i) {
 
       // Botones 🟩
       $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
-        stop($("#nom" + i + "_mano1"), 0);
-        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        stop($("#nom" + i + "_mano1"), true);
+        // salida($("#nom" + i + "_mano1"), "default", 0, 0);
         entrar($("#nom" + i + "_img6"), "der", 1, 0);
         entrar($("#nom" + i + "_btn2"), "default", 1, 1);
         entrar($("#nom" + i + "_mano2"), "sheker2", 1, 1.2);
       });
       $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
-        stop($("#nom" + i + "_mano2"), 0);
-        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        stop($("#nom" + i + "_mano2"), true);
+        // salida($("#nom" + i + "_mano2"), "default", 0, 0);
         entrar($("#nom" + i + "_img5"), "der", 1, 0);
       });
     }); //
@@ -356,23 +354,23 @@ function slide7(i) {
 
       // Abrir Modal 🟩
       $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
-        stop($("#nom" + i + "_mano1"), 0);
-        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        stop($("#nom" + i + "_mano1"), true);
+        // salida($("#nom" + i + "_mano1"), "default", 0, 0);
         $("#modal1P7").modal("show");
       });
       $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
-        stop($("#nom" + i + "_mano2"), 0);
-        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        stop($("#nom" + i + "_mano2"), true);
+        // salida($("#nom" + i + "_mano2"), "default", 0, 0);
         $("#modal2P7").modal("show");
       });
       $("#nom" + i + "_btn3, #nom" + i + "_mano3").click(function () {
-        stop($("#nom" + i + "_mano3"), 0);
-        salida($("#nom" + i + "_mano3"), "default", 0, 0);
+        stop($("#nom" + i + "_mano3"), true);
+        // salida($("#nom" + i + "_mano3"), "default", 0, 0);
         $("#modal3P7").modal("show");
       });
       $("#nom" + i + "_btn4, #nom" + i + "_mano4").click(function () {
-        stop($("#nom" + i + "_mano4"), 0);
-        salida($("#nom" + i + "_mano4"), "default", 0, 0);
+        stop($("#nom" + i + "_mano4"), true);
+        // salida($("#nom" + i + "_mano4"), "default", 0, 0);
         $("#modal4P7").modal("show");
       });
 
@@ -446,18 +444,18 @@ function slide8(i) {
 
       // Abrir Modal 🟩
       $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
-        stop($("#nom" + i + "_mano1"), 0);
-        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        stop($("#nom" + i + "_mano1"), true);
+        // salida($("#nom" + i + "_mano1"), "default", 0, 0);
         $("#modal1P8").modal("show");
       });
       $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
-        stop($("#nom" + i + "_mano2"), 0);
-        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        stop($("#nom" + i + "_mano2"), true);
+        // salida($("#nom" + i + "_mano2"), "default", 0, 0);
         $("#modal2P8").modal("show");
       });
       $("#nom" + i + "_btn3, #nom" + i + "_mano3").click(function () {
-        stop($("#nom" + i + "_mano3"), 0);
-        salida($("#nom" + i + "_mano3"), "default", 0, 0);
+        stop($("#nom" + i + "_mano3"), true);
+        // salida($("#nom" + i + "_mano3"), "default", 0, 0);
         $("#modal3P8").modal("show");
       });
 
@@ -523,18 +521,18 @@ function slide9(i) {
 
       // Abrir Modal 🟩
       $("#nom" + i + "_btn1, #nom" + i + "_mano1").click(function () {
-        stop($("#nom" + i + "_mano1"), 0);
-        salida($("#nom" + i + "_mano1"), "default", 0, 0);
+        stop($("#nom" + i + "_mano1"), true);
+        // salida($("#nom" + i + "_mano1"), "default", 0, 0);
         $("#modal1P9").modal("show");
       });
       $("#nom" + i + "_btn2, #nom" + i + "_mano2").click(function () {
-        stop($("#nom" + i + "_mano2"), 0);
-        salida($("#nom" + i + "_mano2"), "default", 0, 0);
+        stop($("#nom" + i + "_mano2"), true);
+        // salida($("#nom" + i + "_mano2"), "default", 0, 0);
         $("#modal2P9").modal("show");
       });
       $("#nom" + i + "_btn3, #nom" + i + "_mano3").click(function () {
-        stop($("#nom" + i + "_mano3"), 0);
-        salida($("#nom" + i + "_mano3"), "default", 0, 0);
+        stop($("#nom" + i + "_mano3"), true);
+        // salida($("#nom" + i + "_mano3"), "default", 0, 0);
         $("#modal3P9").modal("show");
       });
 
