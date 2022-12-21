@@ -16,7 +16,7 @@ class ZipAFolder {
   static main() {
     console.log(msg_rojo("Empaquetando . . ."));
     console.log(nombreRepo + formatted_date);
-    zipFolder.zipFolder("./Curso", nombreRepo + formatted_date + ".zip", function (err) {
+    zipFolder.zipFolder("./Infografia", nombreRepo + formatted_date + ".zip", function (err) {
       if (err) {
         console.log("Sorry! ", err);
       }
