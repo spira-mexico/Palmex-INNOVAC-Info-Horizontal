@@ -128,8 +128,8 @@ li {
 
 .espacio1 {
   width: 100vw;
-  height: calc(100vw * 940 / 1920);
-  /* height: 99vh; */
+  /* height: calc(100vw * 940 / 1920); */
+  height: 99vh;
 }
 
 .btn {
