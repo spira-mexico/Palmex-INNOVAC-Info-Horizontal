@@ -33,7 +33,7 @@ if (navigator.appVersion.indexOf("Linux") != -1) os = "Linux";
 $("html").mousewheel(function (e, delta) {
   e.preventDefault();
   if (os == "Windows") {
-    this.scrollLeft -= delta * 40;
+    this.scrollLeft -= delta * 60;
   } else {
     this.scrollLeft -= delta;
   }
