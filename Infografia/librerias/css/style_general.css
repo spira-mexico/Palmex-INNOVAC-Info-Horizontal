@@ -8,6 +8,7 @@
   font-weight: bold;
   src: url("./Gobold/Gobold\ Bold\ 2.otf") format("opentype");
 }
+
 body {
   line-height: 1;
   overflow-y:  hidden;
