@@ -5,6 +5,7 @@
   "dependencies": {
     "cli-color": "^2.0.0",
     "moment": "^2.29.1",
+    "uuid": "^9.0.1",
     "zip-a-folder": "^0.0.9"
   },
   "scripts": {
